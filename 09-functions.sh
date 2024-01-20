@@ -23,8 +23,8 @@ fi
 
 yum install mysql -y
 
-VALIDAE $? "mysql installation is success"
+VALIDATE $? "mysql installation is success"
 
 yum install postfix -y
 
-VALIDAE $? "postfix installation is success"
+VALIDATE $? "postfix installation is success"
