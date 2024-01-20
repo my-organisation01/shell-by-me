@@ -4,6 +4,8 @@ USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then
+    echo "Run if [ $USERID -ne 0 ]
+then
     echo "Run the script with root user"
     exit 1
 else 
@@ -11,4 +13,11 @@ else
 fi
 
 yum install git -y
-$?
+
+if [ $? -ne 0 ]
+then
+    echo "Installation of msyl is error"
+    exit 1
+else
+    echo "Installaion of mysql is success"
+fi
